@@ -1,0 +1,148 @@
+.nes-radio {
+  // prettier-ignore
+  $radio: ((1, 1, 0, 0, 0, 0),
+      (1, 1, 1, 1, 0, 0),
+      (1, 1, 1, 1, 1, 0),
+      (1, 1, 1, 1, 1, 1),
+      (1, 1, 1, 1, 1, 0),
+      (1, 1, 1, 1, 0, 0),
+      (1, 1, 0, 0, 0, 0),
+    );
+  // prettier-ignore
+  $radio-checked-focus: ((2, 2, 0, 0, 0, 0),
+      (2, 2, 2, 2, 0, 0),
+      (2, 2, 2, 2, 2, 0),
+      (2, 2, 2, 2, 2, 2),
+      (2, 2, 2, 2, 2, 0),
+      (2, 2, 2, 2, 0, 0),
+      (2, 2, 0, 0, 0, 0),
+    );
+  $colors: ($base-color, map-get($default-colors, "shadow"));
+  $colors-radio-dark: ($color-white, map-get($default-colors, "shadow"));
+
+  margin-right: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  @include visually-hidden();
+
+  &+span {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: $cursor-click-url, pointer;
+  }
+
+  &:checked+span::before {
+    position: absolute;
+    left: -20px;
+    margin-top: -15px;
+    content: "";
+
+    @include pixelize(2px, $radio, $colors);
+  }
+
+  &:checked:hover,
+  &:checked:focus {
+    &+span::before {
+      animation: blink 1s infinite steps(1);
+    }
+  }
+
+  &:checked:focus+span::before {
+    @include pixelize(2px, $radio-checked-focus, $colors);
+  }
+
+  &.is-dark {
+    +span {
+      color: $color-white;
+    }
+
+    // prettier-ignore
+    +span::before {
+      /* stylelint-disable-line no-descending-specificity */
+      color: $color-white;
+    }
+
+    &:checked+span::before {
+      @include pixelize(2px, $radio-checked-focus, $colors-radio-dark);
+
+      color: $color-white;
+    }
+
+    &:checked:focus+span::before {
+      @include pixelize(2px, $radio-checked-focus, $colors-radio-dark);
+
+      color: $color-white;
+    }
+  }
+
+  &.is-disabled {
+    $color: map-get($disabled-colors, "normal");
+    $colors-radio-disabled: ($color, map-get($disabled-colors, "shadow"));
+
+    +span {
+      color: $color;
+      cursor: not-allowed;
+    }
+
+    /* stylelint-disable-next-line no-descending-specificity */
+    +span::before {
+      color: $color;
+      cursor: not-allowed;
+    }
+
+    &:checked:hover,
+    &:checked:focus {
+      &+span::before {
+        animation: unset;
+      }
+    }
+
+    /* stylelint-disable-next-line no-descending-specificity */
+    &:checked+span::before {
+      @include pixelize(2px, $radio-checked-focus, $colors-radio-disabled);
+
+      color: $color;
+    }
+
+    &:checked:focus+span::before {
+      @include pixelize(2px, $radio-checked-focus, $colors-radio-disabled);
+
+      color: $color;
+    }
+  }
+}
+
+.nes-choose {
+  .radio-image {
+    -webkit-box-shadow: 0px 15px 30px 0px rgba(16, 146, 147, 0.12);
+    -moz-box-shadow: 0px 15px 30px 0px rgba(16, 146, 147, 0.12);
+    box-shadow: 0px 15px 30px 0px rgba(16, 146, 147, 0.12);
+    border-radius: 5px;
+    -webkit-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    -o-transition-duration: .2s;
+    transition-duration: .2s;
+    cursor: pointer;
+  }
+
+  .radio-hidden:checked~.radio-image {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+
+  .radio-hidden {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  .radio-container {
+    margin: 10px;
+  }
+
+  .radio-image:hover {
+    transform: scale(1.03);
+  }
+}

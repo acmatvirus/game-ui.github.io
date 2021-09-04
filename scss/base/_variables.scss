@@ -1,0 +1,121 @@
+// Font
+@font-face {
+  font-family: 'Press Start 2P';
+  src: url('../font/PressStart2P.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font-family: "Press Start 2P" !default;
+$font-size: 16px !default;
+// Color
+$color-black: #212529;
+$color-white: #fff;
+$background-color: #FFF;
+
+$color-00: #7c7c7c;
+$color-01: #0000fc;
+$color-02: #0000bc;
+$color-03: #4428bc;
+$color-04: #940084;
+$color-05: #a80020;
+$color-06: #a81000;
+$color-07: #881400;
+$color-08: #503000;
+$color-09: #007800;
+$color-0A: #006800;
+$color-0B: #005800;
+$color-0C: #004058;
+$color-0D: #000;
+$color-0E: #000;
+$color-0F: #000;
+
+$color-10: #bcbcbc;
+$color-11: #0078f8;
+$color-12: #0058f8;
+$color-13: #6844fc;
+$color-14: #d800cc;
+$color-15: #e40058;
+$color-16: #f83800;
+$color-17: #e45c10;
+$color-18: #ac7c00;
+$color-19: #00b800;
+$color-1A: #00a800;
+$color-1B: #00a844;
+$color-1C: #088;
+$color-1D: #000;
+$color-1E: #000;
+$color-1F: #000;
+
+$color-20: #f8f8f8;
+$color-21: #3cbcfc;
+$color-22: #6888fc;
+$color-23: #9878f8;
+$color-24: #f878f8;
+$color-25: #f85898;
+$color-26: #f87858;
+$color-27: #fca044;
+$color-28: #f8b800;
+$color-29: #b8f818;
+$color-2A: #58d854;
+$color-2B: #58f898;
+$color-2C: #00e8d8;
+$color-2D: #787878;
+$color-2E: #000;
+$color-2F: #000;
+
+$color-30: #fcfcfc;
+$color-31: #a4e4fc;
+$color-32: #b8b8f8;
+$color-33: #d8b8f8;
+$color-34: #f8b8f8;
+$color-35: #f8a4c0;
+$color-36: #f0d0b0;
+$color-37: #fbdfa6;
+$color-38: #f8d878;
+$color-39: #d8f878;
+$color-3A: #b8f8b8;
+$color-3B: #b8f8d8;
+$color-3C: #00fcfc;
+$color-3D: #d8d8d8;
+$color-3E: #000;
+$color-3F: #000;
+
+$button-background: #92CD41;
+$sec-button-background: #76c442;
+$shadow-color: #4AA52E;
+$alt-button-background: #F7D51D;
+$alt-sec-button-background: #F2C409;
+$alt-shadow-color: #E59400;
+$reset-button-background: #E76E55;
+$reset-sec-button-background: #CE372B;
+$reset-shadow-color: #8C2022;
+
+$default-colors: (normal: $background-color,
+  hover: #e7e7e7,
+  shadow: #adafbc) !default;
+$disabled-colors: (normal: #d3d3d3,
+  shadow: #adafbc) !default;
+$primary-colors: (normal: #209cee,
+  hover: #108de0,
+  shadow: #006bb3) !default;
+$success-colors: (normal: #92cc41,
+  hover: #76c442,
+  shadow: #4aa52e) !default;
+$warning-colors: (normal: #f7d51d,
+  hover: #f2c409,
+  shadow: #e59400) !default;
+$error-colors: (normal: #e76e55,
+  hover: #ce372b,
+  shadow: #8c2022) !default;
+
+
+
+
+$base-color: $color-black !default;
+$background-color: $color-white !default;
+
+$cursor-url: url(get-file-as-data-uri("../assets/cursor.png")) !default;
+$cursor-click-url: url(get-file-as-data-uri("../assets/cursor-click.png")) 14 0 !default;
+
+$border-size: 4px !default;
