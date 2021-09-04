@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="scss/main.css">
+</head>
+<script>
+    let base_url = 'game-ui.test/';
+</script>
+<body>
+    <main class="active">
+        <div class="box is-circle">
+            <input type="text" class="nes-input" placeholder="Charater name">
+            <br><br>
+            Choose Charater <br>
+            <div class="nes-choose d-flex justify-content-center">
+
+                <label class="radio-container">
+                    <input name="method" type="radio" class="radio-hidden" value="Barbarian" checked>
+                    <img src="media/charater/Barbarian-1.png" class="radio-image">
+                </label>
+            </div>
+            <br>
+            <div class="d-flex justify-content-center">
+                <button type="button" class="nes-btn is-success" id="creator">Create</button>
+            </div>
+        </div>
+        <div class="tab text-center d-none">
+            Welcome to game <br>
+            <button class="nes-btn is-danger" id="play">PLAY</button>
+        </div>
+        <div class="main d-none">
+            <canvas id="boss" width="400" height="400"></canvas>
+            <canvas id="charater" width="400" height="400"></canvas>
+            <canvas id="game" width="400" height="400"></canvas>
+        </div>
+        <div class="attack d-none">
+            <span class="close">x</span>
+        </div>
+    </main>
+    <script src="js/vendor/jquery-3.2.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/game.js"></script>
+</body>
+
+</html>
